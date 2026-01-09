@@ -19,7 +19,7 @@ const trustPoints = [
     },
     {
         icon: Users,
-        title: '500+ Clients',
+        title: '1000+ Clients',
         description: 'Trusted by families across the NCR region'
     },
 ];

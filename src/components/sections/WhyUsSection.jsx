@@ -82,9 +82,9 @@ export const WhyUsSection = () => {
                 {/* Stats Row */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-16 pt-16 border-t border-primary-foreground/10">
                     {[
-                        { value: '15+', label: 'Years Experience' },
-                        { value: '500+', label: 'Properties Sold' },
-                        { value: '₹200Cr+', label: 'Transaction Value' },
+                        { value: '1500+', label: 'Years Experience' },
+                        { value: '50+', label: 'Properties Sold' },
+                        { value: '₹20Cr+', label: 'Transaction Value' },
                         { value: '98%', label: 'Client Satisfaction' },
                     ].map((stat) => (
                         <div key={stat.label} className="text-center">
