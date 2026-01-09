@@ -1,0 +1,290 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts Import - Inter for clean modern sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+@layer base {
+    :root {
+        /* Premium Real Estate Color Palette - Light Mode */
+        /* Deep Charcoal Primary */
+        --background: 0 0% 98%;
+        --foreground: 210 11% 15%;
+        
+        /* Card & Surface Colors */
+        --card: 0 0% 100%;
+        --card-foreground: 210 11% 15%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 210 11% 15%;
+        
+        /* Primary - Deep Charcoal */
+        --primary: 210 11% 15%;
+        --primary-foreground: 0 0% 98%;
+        
+        /* Secondary - Warm Gray */
+        --secondary: 220 9% 94%;
+        --secondary-foreground: 210 11% 25%;
+        
+        /* Muted - Soft Neutrals */
+        --muted: 220 9% 94%;
+        --muted-foreground: 215 8% 45%;
+        
+        /* Accent - Premium Emerald Green */
+        --accent: 153 47% 35%;
+        --accent-foreground: 0 0% 100%;
+        
+        /* Emerald variations for rich design */
+        --emerald: 153 47% 35%;
+        --emerald-light: 153 35% 45%;
+        --emerald-dark: 153 55% 25%;
+        --emerald-glow: 153 47% 35%;
+        
+        /* Destructive */
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        
+        /* Border & Input */
+        --border: 220 9% 89%;
+        --input: 220 9% 89%;
+        --ring: 153 47% 35%;
+        
+        /* Charts */
+        --chart-1: 153 47% 35%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        
+        --radius: 0.5rem;
+        
+        /* Custom Premium Shadows */
+        --shadow-soft: 0 4px 20px -4px hsla(210, 11%, 15%, 0.08);
+        --shadow-medium: 0 8px 30px -8px hsla(210, 11%, 15%, 0.12);
+        --shadow-strong: 0 20px 60px -15px hsla(210, 11%, 15%, 0.18);
+        --shadow-emerald: 0 8px 30px -8px hsla(153, 47%, 35%, 0.25);
+        
+        /* Transitions */
+        --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-bounce: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    
+    .dark {
+        /* Premium Dark Mode - Deep Charcoal Background */
+        --background: 210 11% 8%;
+        --foreground: 0 0% 95%;
+        
+        --card: 210 11% 11%;
+        --card-foreground: 0 0% 95%;
+        --popover: 210 11% 11%;
+        --popover-foreground: 0 0% 95%;
+        
+        --primary: 0 0% 95%;
+        --primary-foreground: 210 11% 8%;
+        
+        --secondary: 210 10% 16%;
+        --secondary-foreground: 0 0% 90%;
+        
+        --muted: 210 10% 16%;
+        --muted-foreground: 215 8% 60%;
+        
+        --accent: 153 47% 40%;
+        --accent-foreground: 0 0% 100%;
+        
+        --emerald: 153 47% 40%;
+        --emerald-light: 153 40% 50%;
+        --emerald-dark: 153 50% 30%;
+        
+        --destructive: 0 62% 30%;
+        --destructive-foreground: 0 0% 98%;
+        
+        --border: 210 10% 18%;
+        --input: 210 10% 18%;
+        --ring: 153 47% 40%;
+        
+        --chart-1: 153 47% 45%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    
+    /* Typography Scale */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 1.25;
+    }
+    
+    .font-display {
+        font-family: 'Playfair Display', serif;
+    }
+    
+    /* Smooth scroll */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Selection color */
+    ::selection {
+        background-color: hsl(var(--emerald) / 0.2);
+        color: hsl(var(--foreground));
+    }
+}
+
+@layer components {
+    /* Premium Button Styles */
+    .btn-premium {
+        @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-lg;
+        @apply bg-accent text-accent-foreground;
+        @apply hover:opacity-90;
+        transition: var(--transition-smooth);
+        box-shadow: var(--shadow-emerald);
+    }
+    
+    .btn-premium:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 35px -10px hsl(var(--emerald) / 0.35);
+    }
+    
+    .btn-ghost {
+        @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-lg;
+        @apply bg-transparent border border-border text-foreground;
+        @apply hover:bg-secondary;
+        transition: var(--transition-smooth);
+    }
+    
+    /* Card Styles */
+    .card-premium {
+        @apply bg-card rounded-xl border border-border;
+        box-shadow: var(--shadow-soft);
+        transition: var(--transition-smooth);
+    }
+    
+    .card-premium:hover {
+        box-shadow: var(--shadow-medium);
+        transform: translateY(-2px);
+    }
+    
+    /* Section Container */
+    .section-container {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+    
+    /* Text Gradient */
+    .text-gradient-emerald {
+        background: linear-gradient(135deg, hsl(var(--emerald)) 0%, hsl(var(--emerald-light)) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    /* Subtle Animations */
+    .animate-fade-up {
+        animation: fadeUp 0.6s ease-out forwards;
+    }
+    
+    .animate-fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+    }
+    
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Stagger children animation */
+    .stagger-children > * {
+        opacity: 0;
+        animation: fadeUp 0.5s ease-out forwards;
+    }
+    
+    .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+    .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+    .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+    .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+    .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+    .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+    
+    /* Premium Overlay */
+    .overlay-gradient {
+        background: linear-gradient(180deg, 
+            hsla(210, 11%, 8%, 0) 0%, 
+            hsla(210, 11%, 8%, 0.4) 50%,
+            hsla(210, 11%, 8%, 0.85) 100%
+        );
+    }
+    
+    /* Focus States */
+    .focus-ring {
+        @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background;
+    }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
