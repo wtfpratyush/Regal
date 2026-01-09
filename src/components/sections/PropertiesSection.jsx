@@ -67,7 +67,7 @@ const properties = [
     },
     {
         id: 6,
-        title: 'Builder Floor - 3 BHK',
+        title: 'Builder - 3 BHK',
         location: 'Sector 77, Faridabad',
         price: '₹72 Lakh',
         type: 'Residential',
@@ -111,7 +111,7 @@ export const PropertiesSection = () => {
                         </p>
                     </div>
 
-                    {/* Filters */}
+                 
                     <div className="flex items-center gap-2 flex-wrap">
                         {filters.map((filter) => (
                             <Button
@@ -147,7 +147,7 @@ export const PropertiesSection = () => {
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                                 
-                                {/* Overlay on Hover */}
+                               
                                 <div className={`absolute inset-0 bg-primary/40 flex items-center justify-center gap-3 transition-opacity duration-300 ${hoveredId === property.id ? 'opacity-100' : 'opacity-0'}`}>
                                     <button className="w-10 h-10 rounded-full bg-card/90 flex items-center justify-center hover:bg-card transition-colors">
                                         <Heart className="w-4 h-4 text-foreground" />
@@ -162,7 +162,7 @@ export const PropertiesSection = () => {
                                     {property.type}
                                 </Badge>
 
-                                {/* Featured Badge */}
+                              
                                 {property.featured && (
                                     <Badge className="absolute top-4 right-4 bg-amber-500 text-amber-950">
                                         Featured

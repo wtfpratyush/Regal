@@ -4,7 +4,7 @@ import { Button } from '../ui/button';
 
 const highlights = [
     'Deep knowledge of Faridabad real estate market',
-    'Transparent and honest dealings',
+    'Transparent & honest dealings',
     'Personalized property recommendations',
     'End-to-end transaction support',
     'Strong network of verified properties',
@@ -23,7 +23,7 @@ export const AboutSection = () => {
         <section id="about" className="py-20 lg:py-28 bg-background">
             <div className="section-container">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                    {/* Image Column */}
+              
                     <div className="relative order-2 lg:order-1">
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                             <img
@@ -31,7 +31,7 @@ export const AboutSection = () => {
                                 alt="Reegal Realtors Office"
                                 className="w-full h-full object-cover"
                             />
-                            {/* Overlay Pattern */}
+                        
                             <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
                         </div>
                         
@@ -50,7 +50,7 @@ export const AboutSection = () => {
                     {/* Content Column */}
                     <div className="order-1 lg:order-2">
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-accent/10 rounded-full mb-6">
-                            <span className="text-xs font-medium text-accent uppercase tracking-wider">About Us</span>
+                            <span className="text-xs font-medium text-accent uppercase tracking-wider">pratyush Us</span>
                         </div>
 
                         <h2 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-6">
